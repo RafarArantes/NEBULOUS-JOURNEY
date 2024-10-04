@@ -1,0 +1,131 @@
+:root {
+    --font-family: 'SpaceFont', sans-serif;
+    --button-color: transparent;
+    --button-hover-border-color: rgb(37, 150, 190);
+    --text-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+#canvas1 {
+    border: 5px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #4d79bc;
+    max-width: 100%;
+    max-height: 100%;
+}
+#layer1, #player, #angler1, #angler2, #angler3, #projectile, #smokeExplosion {
+    display: none;
+}
+
+.botao {
+    display: none; /* Oculta o botão inicialmente */
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 20px;
+    font-style: bold;
+    color: var(--text-color);
+    background-color: rgb(37, 190, 50);
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: background-color .3s, transform .3s, border .3s;
+    font-family: var(--font-family);
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: white;
+    color: rgb(37, 190, 50);
+}
+
+.botaoIniciar {
+    display: none; /* Oculta o botão inicialmente */
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 20px;
+    font-style: bold;
+    color: var(--text-color);
+    background-color: rgb(37, 150, 190);
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: background-color .3s, transform .3s, border .3s;
+    font-family: var(--font-family);
+    cursor: pointer;
+}
+
+.botaoIniciar:hover {
+    background-color: white;
+    color: rgb(37, 150, 190);
+}
+
+.mscOn {
+    position: absolute;
+    top: 78%;
+    left: 8%;
+    transform: translate(-50%, -50%);
+    padding: 5px 8px;
+    font-size: 10px;
+    font-style: bold;
+    color: black;
+    background-color: white;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: background-color .3s, transform .3s, border .3s;
+    font-family: var(--font-family);
+    cursor: pointer;
+}
+.mscOn:hover,
+.mscOn.active {
+    background-color: green;
+    color: white;
+}
+
+.mscOff {
+    position: absolute;
+    top: 78%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    padding: 5px 5px;
+    font-size: 10px;
+    font-style: bold;
+    color: black;
+    background-color: white;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: background-color .3s, transform .3s, border .3s;
+    font-family: var(--font-family);
+    cursor: pointer;
+}
+
+.mscOff:hover,
+.mscOff.active {
+    background-color: red;
+    color: white;
+}
+
+.iconmusic {
+    position: absolute;
+    top: 76%;
+    left: 4%;
+    color: var(--text-color);
+    border: 2px solid transparent;
+}
+
+.img {
+    height: 10px;
+    width: 10px;
+}

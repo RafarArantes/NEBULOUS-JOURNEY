@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>telaInicial</title>
+    <link rel="stylesheet" href="/components/button.css">
+    <link rel="stylesheet" href="/components/body.css">
+    <link rel="stylesheet" href="/components/title.css">
+    <link rel="stylesheet" href="/components/modal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+<body class="background">
+    <h1 class="title">NEBULOUS JOURNEY</h1>
+    <div class="BuracoNegro">
+        <img src="/images/BuracoNegro.gif" alt="BuracoNegro">
+    </div>
+    <div class="button-container">
+        <a href="index.html" class="button">JOGAR</a>
+        <button class="button" id="abrirComoJogarModal">COMO JOGAR</button> <!-- Botão para abrir Como Jogar -->
+        <button class="button" id="abrirHistoriaModal">HISTÓRIA</button> <!-- Botão para abrir História -->
+    </div>
+
+    <!-- botão de som -->
+
+    <audio src="/music/menu.mp3" id="mscBack" loop autoplay></audio>
+    <button class="mscOn" id="mscOn">ON</button>
+    <button class="mscOff" id="mscOff">OFF</button>
+    <button class="iconmusic"><img src="sprite/fones.png"></button>
+    
+
+<!-- Função para os botões de música funcionarem -->
+<script>
+    const buttonOn = document.getElementById('mscOn');
+    const buttonOff = document.getElementById('mscOff');
+    const audio = document.getElementById('mscBack');
+    
+    buttonOn.addEventListener('click', function() {
+        audio.volume = 0.1;
+        audio.play();
+        buttonOn.classList.add('active');
+        buttonOff.classList.remove('active');
+    });
+
+    buttonOff.addEventListener('click', function() {
+        audio.pause();
+        audio.currentTime = 0; // Reinicia a música quando pausada
+        buttonOff.classList.add('active');
+        buttonOn.classList.remove('active');
+    });
+
+
+</script>
+
+    <!-- Modal Como Jogar -->
+    <div id="comoJogarModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('comoJogarModal')">&times;</span>
+            <div class="modal-list">
+                <h2>COMO JOGAR</h2>
+                <h3>OBJETIVO</h3>
+                <p class ="text2">O objetivo principal é sobreviver o máximo possivel, desviando e destruindo obstaculos</p>
+                <img src="/images/nave.png" class="como-image">
+                <h3>COMANDOS</h3>
+                <ul>
+                    <li>W/<img src="/images/cima.png" alt="seta" class="icons"> - CIMA  <span class="comando"> ESPAÇO/<img src="images/spacebar.png" class="icons2">  - ATIRAR </span></li>
+                    <li>S/<img src="/images/baixo.png" alt="seta" class="icons"> - BAIXO <span class="comando2">  ESC/<img src="images/esc.png" class="icons2"> - SAIR/PAUSAR </span> </li>
+                </ul>
+                <h3>INIMIGOS DESTRUTIVOS</h3><br>
+                <ul class="inimigo-list">
+                    <li class="inimigo-item">
+                        <img src="/images/alien.png" class="inimigo-image">
+                        <p class ="text2">O Alien é um inimigo com o total de 2 de vida</p>
+                    </li>
+                    <li class="inimigo-item">
+                        <img src="/sprite/asteroide.png" class="inimigo-image">
+                        <p class ="text2">O asteroide é um inimigo com o total de 5 de vida</p>
+                    </li>
+                </ul>
+              
+                <h3>INIMIGO INDESTRUTIVEL </h3>
+                <img src="/sprite/satelite.png" class="satelite-image">
+                <p class ="text2">O satelite é um obstaculo que nao é possivel destruir</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal História -->
+    <div id="historiaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('historiaModal')">&times;</span>
+            <div class="modal-text">
+                <h2>HISTÓRIA</h2>
+                <p>O astronauta contratado pelo governo tem a missão de investigar o interior do buraco. Saindo do planeta Terra sem saber o que encontraria no espaço.</p>
+                <img src="/images/planeta.png" alt="Imagem História" class="modal-image">
+                <p>Viajando por alguns meses sozinho em sua espaçonave.</p>
+                <img src="/sprite/nave.gif" alt="Imagem Nave" class="modal-image">
+                <p>Avistou o buraco negro, ele era muito maior do que imaginava, por conta disso foi atraído pela gravidade e engolido pelo mesmo.</p>
+                <img src="/images/espaço.gif" alt="Outra Imagem" class="modal-image">
+                <p>Diante disso, vaga pelo espaço buscando uma maneira de voltar para casa, enfrentando os desafios do desconhecido...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/components/modal.js"></script>
+</body>
+</html>

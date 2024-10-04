@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+h1.title {
+    color: var(--text-color);
+    font-size: 120px;
+    font-family: "Press Start 2P", system-ui;
+    animation: glitch 1s linear infinite;
+    margin: 0; 
+}
+
+@keyframes glitch {
+    2%, 64% {
+        transform: translate(2px, 0) skew(0deg);
+    }
+    4%, 60% {
+        transform: translate(-2px, 0) skew(0deg);
+    }
+    62% {
+        transform: translate(0, 0) skew(5deg);
+    }
+}
+
+.h1.titlev2::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%) ;
+    animation: glitchTop 1s linear infinite;
+}
+
+@keyframes glitchTop 
+{
+ 2%, 64%
+ {
+    transform: translate(2px, -2px) ;
+ } 
+ 4%, 60%
+  {
+    transform: translate(-2px, 2px);
+  }
+  62%
+  {
+    transform: translate(13pox, -1px) skew(-13deg);
+  }
+}
+
+.glitch::after
+{
+ content: attr(data-text);
+ position: absolute;
+ top: 0;
+ left: 0;
+ clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+ animation: glitchBottom 1s linear infinite;
+}
+
+@keyframes glitchBottom
+{
+    2%, 64%
+    {
+        transform: translate(-2px, 0);
+    }
+    4%, 60%
+    {
+        transform: translate(-2px, 0);
+    }
+    62%
+    {
+        transform: translate(-22px, 5px) skew(21deg);
+    }
+}h1.title {
+    color: var(--text-color);
+    font-size: 120px;
+    font-family: var(--font-family);
+    animation: glitch 1s linear infinite;
+    margin: 0; 
+}
+
+h2 {
+    font-family: (--font-family);
+    font-size: 50px;
+    color: #fff;
+    margin-top: 0px;
+    animation: glitch 2s linear infinite;
+}
+
+@keyframes glitch {
+    2%, 64% {
+        transform: translate(2px, 0) skew(0deg);
+    }
+    4%, 60% {
+        transform: translate(-2px, 0) skew(0deg);
+    }
+    62% {
+        transform: translate(0, 0) skew(5deg);
+    }
+}
+
+.h1.titlev2::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%) ;
+    animation: glitchTop 1s linear infinite;
+}
+
+@keyframes glitchTop 
+{
+ 2%, 64%
+ {
+    transform: translate(2px, -2px) ;
+ } 
+ 4%, 60%
+  {
+    transform: translate(-2px, 2px);
+  }
+  62%
+  {
+    transform: translate(13pox, -1px) skew(-13deg);
+  }
+}
+
+.glitch::after
+{
+ content: attr(data-text);
+ position: absolute;
+ top: 0;
+ left: 0;
+ clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+ animation: glitchBottom 1s linear infinite;
+}
+
+@keyframes glitchBottom
+{
+    2%, 64%
+    {
+        transform: translate(-2px, 0);
+    }
+    4%, 60%
+    {
+        transform: translate(-2px, 0);
+    }
+    62%
+    {
+        transform: translate(-22px, 5px) skew(21deg);
+    }
+}
+
+.mscOn {
+    position: absolute;
+    top: 95%;
+    left: 8%;
+    transform: translate(-50%, -50%);
+    padding: 5px 8px;
+    font-size: 10px;
+    font-style: bold;
+    color: black;
+    background-color: white;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: background-color .3s, transform .3s, border .3s;
+    font-family: var(--font-family);
+    cursor: pointer;
+}
+.mscOn:hover,
+.mscOn.active {
+    background-color: green;
+    color: white;
+}
+
+.mscOff {
+    position: absolute;
+    top: 95%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    padding: 5px 5px;
+    font-size: 10px;
+    font-style: bold;
+    color: black;
+    background-color: white;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: background-color .3s, transform .3s, border .3s;
+    font-family: var(--font-family);
+    cursor: pointer;
+}
+
+.mscOff:hover,
+.mscOff.active {
+    background-color: red;
+    color: white;
+}
+
+.iconmusic {
+    position: absolute;
+    top: 93%;
+    left: 4%;
+    color: var(--text-color);
+    border: 2px solid transparent;
+    background-color: black;
+}
+
+.img {
+    height: 10px;
+    width: 10px;
+}
+
+@media (max-width: 1080px) {
+    /* Estilos para telas menores, como tablets e celulares */
+    .BuracoNegro img {
+        margin-right: 40px; /* Ajuste conforme necessário */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Estilos para telas menores, como smartphones */
+    .BuracoNegro img {
+        margin-right: 20px; /* Ajuste conforme necessário */
+    }
+}
